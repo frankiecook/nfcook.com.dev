@@ -1,0 +1,114 @@
+<div id="home" class="code-container">
+    <div class="code-line">
+        <p class="code line-number">1&emsp;</p>
+        <p class="code">const&nbsp</p>
+        <p class="code code-clickable">About</p>
+        <p class="code">;</p>
+    </div>
+    <div class="code-line">
+        <div class="code line-number">2 </div>
+        <div class="code">const </div>
+        <div class="code code-clickable">Info</div>
+        <div class="code">;</div>
+    </div>
+    <div class="code-line">
+        <div class="code">const&nbsp</div>
+        <div class="code code-clickable">Portfolio</div>
+        <div class="code">;</div>
+    </div>
+    <div class="code-line">
+        <div class="code">const&nbsp</div>
+        <div class="code code-clickable">CV-Resume</div>
+        <div class="code">;</div>
+    </div>
+    <div class="code-line">
+        <div class="code">const&nbsp</div>
+        <div class="code code-clickable">Contact</div>
+        <div class="code">;</div>
+    </div>
+    <div class="code-line"></div>
+    <div class="code-line">
+        <div class="code">let selection =&nbsp</div>
+        <div class="code">null</div>
+        <div class="code">;</div>
+    </div>
+    <div class="code-line"></div>
+    <div class="code-line">
+        <div class="code">if (selection != null) {</div>
+    </div>
+    <div class="code-line">
+        <div class="code">&emsp;displaySection(selection);</div>
+    </div>
+    <div class="code-line">
+        <div class="code">}</div>
+    </div>
+</div>
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">Frankie Cook</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#services">Skills</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#cv-resume">CV/Resume</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<script type="text/javascript">
+var i = 0;
+var text;
+var speed = 50;
+
+var codeLines = document.getElementsByClassName("code-line");
+
+async function typeWriterLines(codeLines) {
+    for (const line of codeLines) {
+        for (const child of line.children) {
+            text = child.innerHTML;
+            child.innerHTML = "";
+            await typeWriter(child, text);
+        }
+    }
+}
+
+
+function typeWriter(element, text, i=0) {
+    element.textContent += text[i];
+
+    if (i >= text.length-1) {
+        return;
+    }
+
+    setTimeout(() => typeWriter(element, text, i+1), 50);
+}
+
+typeWriterLines(codeLines);
+</script>

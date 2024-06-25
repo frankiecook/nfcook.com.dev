@@ -1,0 +1,58 @@
+#about, #services, #portfolio, #aside, #contact {
+    display: none;
+}
+
+.code-container {
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.code-line {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+
+    // border-right: 5px solid;
+    // white-space: nowrap;
+    // overflow: hidden;
+    // animation: 
+    //     typing 2s steps(18),
+    //     cursor .4s step-end infinite alternate;
+}
+
+// /* cursor blinking */
+// @keyframes cursor {
+//     50% { border-color: transparent }
+// }
+
+// /* typing effect */
+// @keyframes typing {
+//     from { width: 0 }
+// }
+
+.code {
+    width: auto;
+    height: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.code-clickable:hover {
+    background-color: #e1e1e1;
+    border: 1px solid #d0d0d0;
+}
+
+.code-line:hover {
+    border-left: 1px solid black;
+    border-top:  1px solid black;
+    border-bottom:  1px solid black;
+}
